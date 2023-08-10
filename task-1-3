@@ -1,0 +1,20 @@
+#include <iostream>
+
+int main() {
+    int a1, a2, a3;
+
+    // Get user input for three integers
+    std::cout << "Enter three integers: ";
+    std::cin >> a1 >> a2 >> a3;
+
+    // Rotate values one place to the right
+    int temp = a3;
+    a3 = a2;
+    a2 = a1;
+    a1 = temp;
+
+    // Display rotated values
+    std::cout << "Rotated values: " << a1 << " " << a2 << " " << a3 << std::endl;
+
+    return 0;
+}
