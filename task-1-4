@@ -1,0 +1,35 @@
+#include <iostream>
+
+int main() {
+    const int SIM_PIN = 1234;  // Current PIN stored in SIM.
+    int enteredPin;
+
+    // Ask user for the current PIN
+    std::cout << "Enter the current PIN: ";
+    std::cin >> enteredPin;
+
+    // Compare entered PIN with SIM_PIN
+    if (enteredPin == SIM_PIN) {
+        int newPin1, newPin2;
+
+        // Ask user to enter the new PIN twice for verification
+        std::cout << "Enter the new PIN: ";
+        std::cin >> newPin1;
+
+        std::cout << "Enter the new PIN again for verification: ";
+        std::cin >> newPin2;
+
+        // Verify both pins.
+        if (newPin1 == newPin2) {
+            // Update SIM_PIN with the new PIN
+            SIM_PIN = newPin1;
+            std::cout << "PIN successfully changed!" << std::endl;
+        } else {
+            std::cout << "PIN verification failed. Please enter a new PIN again." << std::endl;
+        }
+    } else {
+        std::cout << "Incorrect current PIN. Please try again." << std::endl;
+    }
+
+    return 0;
+}
