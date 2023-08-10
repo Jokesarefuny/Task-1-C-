@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+
+int main() {
+    float num1, num2;
+    
+    // have user to input for two positive float numbers
+    std::cout << "Enter the first positive float number: ";
+    std::cin >> num1;
+    
+    std::cout << "Enter the second positive float number: ";
+    std::cin >> num2;
+    
+    // Calculate the integer andfractional part of the division
+    int integerPart = static_cast<int>(num1 / num2);
+    float fractionalPart = num1 - (integerPart * num2);
+    
+    std::cout << "Integer part of division: " << integerPart << std::endl;
+    std::cout << "Fractional part of division: " << fractionalPart << std::endl;
+    
+    return 0;
+}
