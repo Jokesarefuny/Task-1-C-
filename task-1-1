@@ -1,76 +1,22 @@
 #include <iostream>
 
-using std::cout;
-using std::cin;
-
 int main() {
-    int i, studs_num, suc, fail, times;
-    float grd, sum_suc, sum_fail, min_grd, max_grd;
-
-    cout << "Enter number of students: ";
-    cin >> studs_num;
-
-    if (studs_num <= 0) {
-        cout << "Wrong number of students\n";
-        return 0; // Program is terminated.
+    int num 1, num 2;
+    
+    // Get user input for the two positive integers
+    std::cout << "Enter the first integer: ";
+    std::cin >> num1;
+    
+    std::cout << "Enter the second integer: ";
+    std::cin >> num2;
+    
+    int remainder = num1;
+    
+    while (remainder >= num2) {
+        remainder = num2;
     }
-
-    // 1. Initialize of  the variables with most appropriate values
-    suc = fail = 0;
-    sum_suc = sum_fail = 0.0;
-    min_grd = 10.0; // Initialize to maximum grade
-    max_grd = 0.0;  // Initialize to minimum grade
-
-    for (i = 0; i < studs_num; i++) {
-        cout << "Enter grade: ";
-        cin >> grd;
-
-        if (grd == -1)
-            break;
-
-        if (grd < 0 || grd > 10)
-        {
-            cout << "Wrong grade, try again ...\n";
-            i--; // If the input grade is out of [0, 10], repeat the insertion.
-            continue;
-        }
-
-        if (grd >= 5) {
-            sum_suc += grd; 
-            suc++;
-        } else {
-            sum_fail += grd; 
-            fail++;
-        }
-
-        if (grd < min_grd)
-            min_grd = grd; 
-
-        if (grd > max_grd) {
-            max_grd = grd; 
-            times = 1;      
-        } else if (grd == max_grd) 
-        {
-            times++;
-        }
-    }
-
-    if 
-    {
-        if (suc)
-            cout << "Avg(+): " << sum_suc / suc << '\n';
-        else
-            cout << "Everybody failed\n";
-
-        if (fail)
-            cout << "Avg(-): " << sum_fail / fail << '\n';
-        else
-            cout << "None failed\n";
-
-        cout << "Min: " << min_grd << " Max: " << max_grd << " (appeared " << times << " times)\n";
-    }
-
+    
+    std::cout << "The remainder of " << num1 << " divided by " << num2 << " is " << remainder << std::endl;
+    
     return 0;
 }
-
-
